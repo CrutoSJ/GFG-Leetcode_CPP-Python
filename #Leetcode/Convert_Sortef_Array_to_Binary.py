@@ -32,7 +32,6 @@ def inorder_traversal(node):
         print(node.val, end=" ")
         inorder_traversal(node.right)
 
-t = int(input("Enter no. of test cases: "))
-for i in range (0,t):
-    print("Inorder traversal of the binary search tree:")
-    inorder_traversal(root)
+
+print("Inorder traversal of the binary search tree:")
+inorder_traversal(root)
