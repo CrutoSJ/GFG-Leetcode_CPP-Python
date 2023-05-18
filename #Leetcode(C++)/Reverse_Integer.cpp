@@ -30,12 +30,12 @@ int main() {
     int t;
     cin >> t;
     for (int i=0;i<t;i++){
-        int num;
+        int x;
         cout << "Enter a number: ";
-        cin >> num;
+        cin >> x;
 
         Solution solution;
-        int reversedNum = solution.reverse(num);
+        int reversedNum = solution.reverse(x);
 
         cout << "Reversed number: " << reversedNum << endl;
 
