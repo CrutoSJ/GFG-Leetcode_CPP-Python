@@ -1,3 +1,3 @@
 # Leetcode 
-Learning DSA by solving question on leetcode in CPP-Python.
+Learning DSA by solving question o leetcode in C++ & Python.
 
