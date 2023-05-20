@@ -27,7 +27,6 @@ int main(){
     cin >> t;
     while(t--){
         int n;
-        int target;
         cout << "Enter the size of the array: ";
         cin >> n;
 
@@ -37,6 +36,7 @@ int main(){
             cin >> nums[i];
         }
 
+        int target;
         cout << "Enter the target value: ";
         cin >> target;
 
