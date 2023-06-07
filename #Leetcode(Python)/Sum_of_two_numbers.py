@@ -9,4 +9,4 @@ a = int(input("Enter the value of a: "))
 b = int(input("Enter the value of b: "))
 
 ans = a+b
-print("The sum of numbers: ",ans)
+print("The sum of numbers is: ",ans)
