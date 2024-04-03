@@ -2,6 +2,8 @@
 
 // Link->  https://www.geeksforgeeks.org/problems/minimum-absolute-difference-in-bst-1665139652/1
 
+//Given a binary search tree having n (n>1) nodes, the task is to find the minimum absolute difference between any two nodes.
+
 // #Solution:-
 
 #include<bits/stdc++.h>
