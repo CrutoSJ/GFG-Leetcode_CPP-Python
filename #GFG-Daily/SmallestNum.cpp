@@ -40,7 +40,7 @@ private:
     }
     
 public:
-    string smallestNumber(int s, int d) {
+    string smallestNumber(int s, int d) {//this is brute force takes - O(n) worst case.
         int start = makeS(d);
         int end = makeE(d);
         string ans;
@@ -54,6 +54,8 @@ public:
         
         return to_string(-1);
     }
+
+    //this is the optimized one:- O(d);
 
     string smallestNumberOptimized(int s, int d) {
         if((d*9)<s) return "-1";
