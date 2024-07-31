@@ -2,6 +2,8 @@
 
 // Link-> https://leetcode.com/problems/filling-bookcase-shelves/description/?envType=daily-question&envId=2024-07-31
 
+// Date-> 31/07/24 
+
 // #Solution:-
 
 #include<bits/stdc++.h>
