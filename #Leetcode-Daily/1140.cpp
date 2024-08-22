@@ -12,31 +12,36 @@ using namespace std;
 class Solution {
 public:
     int n;
-    int dp[101][101];// stones diff
-    int alice(int i, int m, vector<int>& piles){
-        if (i == n) return 0;
-        if (dp[i][m]!=-1) return dp[i][m];
-        int diff=INT_MIN;
-        int sum = 0, xN= min(2*m, n-i);
-        for (int x = 1; x <= xN; x++) {
-            sum += piles[i+x-1];
-            diff=max(diff, sum-alice(i+x, max(m, x), piles));                      
+    int dp[2][101][101];
+
+    int playForAlice(vector<int>& piles, int person, int idx, int M){
+        if(idx>=n){
+            return 0;
         }
-        return dp[i][m]=diff;
+
+        if(dp[person][idx][M] != -1){
+            return dp[person][idx][M];
+        }
+
+        int result = (person == 1) ? -1 : INT_MAX;
+        int stones = 0;
+
+        for(int i=1; i<=min(2*M, n-idx); i++){
+            stones += piles[idx+i-1];
+
+            if(person == 1){//Alice
+                result = max(result, stones + playForAlice(piles, 0, idx+i, max(i, M)));
+            } else{//BOB
+                result = min(result, playForAlice(piles, 1, idx+i, max(i, M)));
+            }
+        }
+
+        return dp[person][idx][M] = result ;
     }
 
     int stoneGameII(vector<int>& piles) {
         n = piles.size();
         memset(dp, -1, sizeof(dp));
-        int sum=accumulate(piles.begin(), piles.end(), 0);
-        return (sum+alice(0, 1,  piles))/2;// A=((A+B)+(A-B))/2
+        return playForAlice(piles, 1, 0, 1); // vec, person, idx, M
     }
 };
-
-
-auto init = []() {
-    ios::sync_with_stdio(false);
-    cin.tie(nullptr);
-    cout.tie(nullptr);
-    return 'c';
-}();
