@@ -11,38 +11,44 @@ using namespace std;
 
 class Solution {
 public:
-    void shorten(string& s, int& n){
-        int sz=s.size();
-        n=1;
-        char cur;
-        for(int l=0, r=1; r<sz; r++){
-            cur=s[r];
-            while(l<r && s[l]==cur) l++;
-            if (r<sz && s[l]!=cur){
-                s[n++]=s[r];
-                l=r;
+    int n;
+    int dp[101][101];
+    int solve(int l, int r, string &s){
+        if(l==r){
+            return 1;
+        }
+        if(l>r){
+            return 0;
+        }
+
+        if(dp[l][r] != -1){
+            return dp[l][r];
+        }
+
+        int i = l+1;
+        while(i<=r && s[i] == s[l]){
+            i++;
+        }
+        if(i>r){
+            return 1;
+        }
+
+        int basic = 1 + solve(i, r, s);
+        int lalach = INT_MAX;
+
+        for(int j=i; j<=r; j++){
+            if(s[j] == s[l]){
+                int ans = solve(i, j-1, s) + solve(j ,r, s);
+                lalach = min(lalach, ans);
             }
         }
-        s.resize(n);
+
+        return dp[l][r] = min(basic, lalach);
 
     }
-
-    int dp[101][101];
-    int f(int i, int j, string& s){
-        if (dp[i][j]!=-1) return dp[i][j];
-        if (i==j) return dp[i][j]=1;
-        if (s[i]==s[j]) return f(i, j-1, s);
-        int ans=f(i, j-1, s)+1;
-        for(int k=i+1; k<j-1; k++){
-            if (s[k]==s[j])
-                ans=min(ans, f(i, k-1, s)+f(k, j-1, s));
-        }
-        return dp[i][j]=ans;
-    }
-    int strangePrinter(string& s) {
-        int n;
-        shorten(s, n);
+    int strangePrinter(string s) {
+        n = s.length();
         memset(dp, -1, sizeof(dp));
-        return f(0, n-1, s);
+        return solve(0, n-1, s);
     }
 };
