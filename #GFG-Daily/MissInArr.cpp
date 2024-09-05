@@ -1,6 +1,6 @@
 // #Question:-
 
-// Link-> 05/09/24
+// Link-> https://www.geeksforgeeks.org/problems/missing-number-in-array1416/1
 
 // Date-> 05/09/24
 
