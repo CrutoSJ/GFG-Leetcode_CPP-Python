@@ -18,7 +18,7 @@ class Solution {
         
         for(auto &x : height){
             if(x>limit){
-                covscunt++;
+                count++;
                 limit=x;
             }
         }
