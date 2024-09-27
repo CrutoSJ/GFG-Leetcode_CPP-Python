@@ -6,6 +6,9 @@
 
 // #Solution:-
 
+#include<bits/stdc++.h>
+using namespace std;
+
 class Solution {
   public:
     // Function to find maximum of each subarray of size k.
