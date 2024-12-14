@@ -1,4 +1,4 @@
-#// #Question:-
+// #Question:-
 
 // Link-> https://www.geeksforgeeks.org/problems/search-in-a-rotated-array4618/1
 
