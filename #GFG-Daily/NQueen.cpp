@@ -2,7 +2,7 @@
 
 // Link-> https://www.geeksforgeeks.org/problems/n-queen-problem0315/1
 
-// Date-> 30/08/24
+// Date-> 30/08/24 & 30/01/25
 
 // #Solution:-
 
