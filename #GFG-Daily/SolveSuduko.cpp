@@ -1,6 +1,6 @@
 // #Question:-
 
-// Link-> https://www.geeksforgeeks.org/problems/n-queen-problem0315/1
+// Link-> https://www.geeksforgeeks.org/problems/solve-the-sudoku-1587115621/1
 
 // Date-> 31/01/25
 
