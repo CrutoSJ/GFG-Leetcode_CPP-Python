@@ -1,8 +1,8 @@
 // #Question:-
 
-// Link-> https://leetcode.com/problems/minimum-operations-to-exceed-threshold-value-ii/description/?envType=daily-question&envId=2025-02-13
+// Link-> https://leetcode.com/problems/product-of-the-last-k-numbers/?envType=daily-question&envId=2025-02-14
 
-// Date-> 13/02/25
+// Date-> 14/02/25
 
 // #Solution:-
 
