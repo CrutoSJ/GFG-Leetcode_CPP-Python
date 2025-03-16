@@ -2,7 +2,7 @@
 
 // Link-> https://www.geeksforgeeks.org/problems/minimum-number-of-jumps-1587115620/1
 
-// Date-> 08/09/24
+// Date-> 08/09/24 && 16/03/25
 
 // #Solution:-
 
@@ -28,5 +28,26 @@ class Solution {
             return jumps;
         }
         return -1;
+    }
+};
+
+class Solution1{
+    public:
+    int minJumps(vector<int>& arr) {
+        if(arr[0]==0)return -1;
+        int jump=arr[0], ans=1, maxi=0;
+        
+        for(int i=1; i<arr.size(); i++){
+            maxi--;
+            jump--;
+            maxi=max(maxi,arr[i]);
+            if(jump==0 && i!=arr.size()-1){
+                if(maxi<=0)return -1;
+                jump=maxi;
+                maxi=0;
+                ans++;
+            }
+        }
+        return ans;
     }
 };
