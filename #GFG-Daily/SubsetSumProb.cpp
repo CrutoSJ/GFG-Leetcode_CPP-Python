@@ -1,8 +1,8 @@
 // #Question:-
 
-// Link-> https://www.geeksforgeeks.org/problems/minimum-number-of-jumps-1587115620/1
+// Link-> https://www.geeksforgeeks.org/problems/subset-sum-problem-1611555638/1
 
-// Date-> 08/09/24 && 16/03/25
+// Date-> 17/03/25
 
 // #Solution:-
 
