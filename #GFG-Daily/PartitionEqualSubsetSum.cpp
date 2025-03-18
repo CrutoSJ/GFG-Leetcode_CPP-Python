@@ -1,8 +1,8 @@
 // #Question:-
 
-// Link-> https://www.geeksforgeeks.org/problems/subset-sum-problem-1611555638/1
+// Link-> https://www.geeksforgeeks.org/problems/subset-sum-problem2014/1
 
-// Date-> 17/03/25
+// Date-> 18/03/25
 
 // #Solution:-
 
