@@ -1,6 +1,6 @@
 // #Question:-
 
-// Link-> https://www.geeksforgeeks.org/problems/flood-fill-algorithm1856/1
+// Link-> https://leetcode.com/problems/find-the-count-of-good-integers/?envType=daily-question&envId=2025-04-12
 
 // Date-> 12/04/25
 
