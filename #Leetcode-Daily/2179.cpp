@@ -1,6 +1,6 @@
 // #Question:-
 
-// Link-> https://www.geeksforgeeks.org/problems/distance-from-the-source-bellman-ford-algorithm/1
+// Link-> https://leetcode.com/problems/count-good-triplets-in-an-array/?envType=daily-question&envId=2025-04-15
 
 // Date-> 15/04/25
 
