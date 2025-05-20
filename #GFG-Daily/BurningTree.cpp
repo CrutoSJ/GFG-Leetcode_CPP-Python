@@ -2,7 +2,7 @@
 
 // Link-> https://www.geeksforgeeks.org/problems/burning-tree/1
 
-// Date-> 20/08/24
+// Date-> 20/08/24 & 20/05/25
 
 // #Solution:-
 
