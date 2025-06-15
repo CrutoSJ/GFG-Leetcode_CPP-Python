@@ -1,6 +1,6 @@
 // #Question:-
 
-// Link-> https://www.geeksforgeeks.org/problems/smallest-divisor/1
+// Link-> https://leetcode.com/problems/max-difference-you-can-get-from-changing-an-integer/
 
 // Date-> 15/06/25
 
