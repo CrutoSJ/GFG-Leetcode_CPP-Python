@@ -9,7 +9,66 @@
 #include<bits/stdc++.h>
 using namespace std;
 
-class Solution {
+class Solution2 { // TC - O(n)
+  private:
+    string addStrings(string &s1, string &s2){
+        int i = s1.length()-1;
+        int j = s2.length()-1;
+        int c = 0;
+        string res = "";
+        
+        while(i >= 0 || j >= 0 || c > 0){
+            int sum = c;
+            
+            if(i >= 0){
+                sum += (s1[i] - '0');
+            }
+            
+            if(j >= 0){
+                sum += (s2[j] - '0');
+            }
+            
+            i--, j--;
+            res += (sum % 10 + '0');
+            c   = sum/10; 
+        }
+        
+        reverse(res.begin(), res.end());
+        return res;
+    }
+    
+  public:
+    string minSum(vector<int> &arr) {
+        vector<int> freq(10, 0);
+        
+        for(auto &val : arr){
+            freq[val]++;
+        }
+        
+        string s1 = "";
+        string s2 = "";
+        bool flag = true;
+        
+        for(int digit=0; digit<10; digit++){
+            while(freq[digit]--){
+                if(flag){
+                    if(!(s1.empty() && digit==0)){
+                        s1.push_back(digit + '0');
+                    }
+                    flag = false;
+                } else{
+                    if(!(s2.empty() && digit==0)){
+                        s2.push_back(digit + '0');
+                    }
+                    flag = true;
+                }
+            }
+        }
+        return addStrings(s1, s2);
+    }
+};
+
+class Solution { // TC - O(n * log n)
   public:
     string minSum(vector<int> &arr) {
         int n = arr.size();
